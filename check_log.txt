@@ -1,0 +1,5 @@
+
+> rest-express@1.0.0 check
+> tsc
+
+client/src/components/ThreeBackground.tsx(107,38): error TS2339: Property 'listeners' does not exist on type 'BufferGeometry<NormalBufferAttributes, BufferGeometryEventMap>'.

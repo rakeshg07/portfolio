@@ -1,0 +1,6 @@
+
+> rest-express@1.0.0 dev
+> cross-env NODE_ENV=development tsx server/index.ts
+
+11:02:01 AM [express] serving on port 5000
+Terminate batch job (Y/N)? Terminate batch job (Y/N)? 

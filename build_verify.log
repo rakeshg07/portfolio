@@ -1,0 +1,25 @@
+
+> rest-express@1.0.0 build
+> tsx script/build.ts
+
+building client...
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 2197 modules transformed.
+rendering chunks...
+[meta-images] no Replit deployment domain found, skipping meta tag updates
+computing gzip size...
+[2m../dist/public/[22m[32mindex.html                 [39m[1m[2m    1.56 kB[22m[1m[22m[2m │ gzip:   0.61 kB[22m
+[2m../dist/public/[22m[35massets/index-CVluJ5pT.css  [39m[1m[2m  101.26 kB[22m[1m[22m[2m │ gzip:  17.05 kB[22m
+[2m../dist/public/[22m[36massets/index-BNVGeaEe.js   [39m[1m[33m1,405.74 kB[39m[22m[2m │ gzip: 401.23 kB[22m
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 10.85s[39m
+building server...
+
+  dist\index.cjs  788.8kb
+
+Done in 142ms

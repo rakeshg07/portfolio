@@ -1,0 +1,515 @@
+<<<<<<< HEAD
+# AI Vibe-Coding Prompt — Portfolio Website for Rakesh G
+
+Use this prompt in Cursor, Antigravity, Replit, or any other AI-assisted coding platform to generate a **visually stunning, modern, rave-themed portfolio website** with a clean, scalable architecture and production-ready code.
+
+---
+
+## 1. Project Overview
+
+**Project Title:** Portfolio
+**Profile Name:** Rakesh G
+
+Build a comprehensive, high-performance, and visually immersive personal portfolio website for **Rakesh G**. The site should combine **cutting-edge frontend animation, 3D visuals, and smooth page transitions** with a **rave-inspired aesthetic** and **modern UX/UI principles**.
+
+The final product must be:
+
+* Fully responsive (mobile, tablet, desktop)
+* Performance-optimized
+* SEO-friendly
+* Accessible (WCAG-friendly where possible)
+* Easy to extend and maintain
+
+---
+
+## 2. Tech Stack (Mandatory)
+
+Use the following technologies and structure them cleanly:
+
+### Frontend
+
+* **React** (Component-based architecture)
+* **Next.js** (App Router, SSR/SSG, SEO, routing)
+* **TypeScript** (Strict typing, interfaces, reusable types)
+* **Barba.js** (Smooth page transitions and view-based navigation)
+* **Three.js** (3D elements, interactive visuals, background effects)
+
+### Backend
+
+* **Node.js** (API routes, contact form handling, optional CMS or email service integration)
+
+### Styling & UI
+
+* Tailwind CSS or CSS Modules / Styled Components
+* CSS variables for rave color theming
+* Framer Motion (optional) for UI micro-interactions
+
+---
+
+## 3. Design Aesthetic & Visual Theme
+
+### Core Style
+
+* **Rave Color Theme**: Neon purples, electric blues, glowing pinks, cyber greens, and gradient overlays
+* Dark-mode-first design with glowing accents
+* Glassmorphism / Neon glow effects
+* Subtle animated gradients and particle backgrounds
+
+### Visual Effects
+
+* 3D background elements using **Three.js** (floating shapes, interactive orbs, or cyber grids)
+* Smooth transitions using **Barba.js**
+* Scroll-based animations
+* Hover glow effects and animated buttons
+
+### Typography
+
+* Modern, tech-inspired fonts
+* Bold headings with neon glow
+* Clean, readable body text
+
+---
+
+## 4. Site Structure & Pages
+
+Choose either **Single-Page Application (SPA)** or **Multi-Page Application (MPA)** using Next.js App Router.
+
+### Mandatory Sections
+
+### 1. Landing Page (Home)
+
+* Hero section with name: **Rakesh G**
+* Animated headline (e.g., “Creative Developer | Engineer | Problem Solver”)
+* Call-to-action buttons (View Projects, Contact Me)
+* 3D or animated background using Three.js
+
+### 2. About Page
+
+* Personal introduction
+* Career goals and professional summary
+* Profile image or animated avatar
+
+### 3. Experience Page
+
+* Timeline-based layout
+* Company/Internship/Project roles
+* Responsibilities and achievements
+
+### 4. Skills Section
+
+* Categorized skill cards:
+
+  * Frontend
+  * Backend
+  * Tools
+  * Soft Skills
+* Animated progress bars or skill meters
+
+### 5. Coding Projects
+
+* Grid-based project showcase
+* Each project includes:
+
+  * Title
+  * Description
+  * Tech stack used
+  * Live demo link
+  * GitHub repository link
+
+### 6. Education
+
+* Academic timeline
+* Degree, institution, year, achievements
+
+### 7. Contact Page
+
+* Contact form (Node.js API handler)
+* Email integration
+* Social links (GitHub, LinkedIn, Twitter, etc.)
+
+---
+
+## 5. Global Components
+
+### Dynamic Header (Navbar)
+
+* Sticky, animated navigation
+* Smooth scrolling or page transitions
+* Mobile hamburger menu
+* Glow hover effects
+
+### Footer
+
+* Social icons
+* Copyright
+* Quick links
+* Animated gradient divider
+
+---
+
+## 6. Functional Requirements
+
+### Performance
+
+* Lazy load heavy components
+* Optimize Three.js rendering
+* Image optimization using Next.js Image
+
+### SEO
+
+* Meta tags for every page
+* Open Graph support
+* Sitemap generation
+
+### Accessibility
+
+* Keyboard navigation
+* Proper ARIA labels
+* Color contrast compliance
+
+---
+
+## 7. Folder Structure
+
+Use a clean, scalable structure:
+
+```
+/portfolio
+  /app
+    /page.tsx
+    /about
+    /experience
+    /projects
+    /education
+    /contact
+  /components
+    Header.tsx
+    Footer.tsx
+    Hero.tsx
+    SkillCard.tsx
+    ProjectCard.tsx
+    ThreeScene.tsx
+  /lib
+    barba.ts
+    animations.ts
+  /styles
+    globals.css
+    theme.css
+  /api
+    contact.ts
+```
+
+---
+
+## 8. Animations & Transitions
+
+* Page transitions via **Barba.js**
+* Scroll-triggered animations
+* Button hover neon glow
+* 3D object interaction on mouse move
+
+---
+
+## 9. Backend Features
+
+### Contact API
+
+* Form validation
+* Email sending (Nodemailer or API-based service)
+* Error handling and success feedback
+
+---
+
+## 10. Code Quality Standards
+
+* Fully typed TypeScript
+* Reusable components
+* Environment variables for secrets
+* ESLint + Prettier
+* Clean commit-ready structure
+
+---
+
+## 11. Deployment Targets
+
+* Vercel or Netlify (Frontend)
+* Optional backend hosting (Railway / Render)
+
+---
+
+## 12. Output Requirements for AI
+
+When generating code:
+
+* Generate **production-ready files**
+* Include **README.md with setup instructions**
+* Provide **environment variable examples**
+* Add **comments for key logic sections**
+
+---
+
+## 13. Final Instruction to AI
+
+> Generate a **fully functional, visually immersive, rave-themed portfolio website for Rakesh G** using **React, Next.js, TypeScript, Barba.js, Three.js, and Node.js**. The design should be modern, animated, responsive, and optimized for performance, accessibility, and SEO. Deliver clean, modular, and scalable code suitable for real-world deployment.
+
+---
+
+**This prompt is optimized for “vibe coding” platforms like Cursor, Antigravity, and Replit to ensure clarity in architecture, design intent, and implementation details.**
+=======
+# AI Vibe-Coding Prompt — Portfolio Website for Rakesh G
+
+Use this prompt in Cursor, Antigravity, Replit, or any other AI-assisted coding platform to generate a **visually stunning, modern, rave-themed portfolio website** with a clean, scalable architecture and production-ready code.
+
+---
+
+## 1. Project Overview
+
+**Project Title:** Portfolio
+**Profile Name:** Rakesh G
+
+Build a comprehensive, high-performance, and visually immersive personal portfolio website for **Rakesh G**. The site should combine **cutting-edge frontend animation, 3D visuals, and smooth page transitions** with a **rave-inspired aesthetic** and **modern UX/UI principles**.
+
+The final product must be:
+
+* Fully responsive (mobile, tablet, desktop)
+* Performance-optimized
+* SEO-friendly
+* Accessible (WCAG-friendly where possible)
+* Easy to extend and maintain
+
+---
+
+## 2. Tech Stack (Mandatory)
+
+Use the following technologies and structure them cleanly:
+
+### Frontend
+
+* **React** (Component-based architecture)
+* **Next.js** (App Router, SSR/SSG, SEO, routing)
+* **TypeScript** (Strict typing, interfaces, reusable types)
+* **Barba.js** (Smooth page transitions and view-based navigation)
+* **Three.js** (3D elements, interactive visuals, background effects)
+
+### Backend
+
+* **Node.js** (API routes, contact form handling, optional CMS or email service integration)
+
+### Styling & UI
+
+* Tailwind CSS or CSS Modules / Styled Components
+* CSS variables for rave color theming
+* Framer Motion (optional) for UI micro-interactions
+
+---
+
+## 3. Design Aesthetic & Visual Theme
+
+### Core Style
+
+* **Rave Color Theme**: Neon purples, electric blues, glowing pinks, cyber greens, and gradient overlays
+* Dark-mode-first design with glowing accents
+* Glassmorphism / Neon glow effects
+* Subtle animated gradients and particle backgrounds
+
+### Visual Effects
+
+* 3D background elements using **Three.js** (floating shapes, interactive orbs, or cyber grids)
+* Smooth transitions using **Barba.js**
+* Scroll-based animations
+* Hover glow effects and animated buttons
+
+### Typography
+
+* Modern, tech-inspired fonts
+* Bold headings with neon glow
+* Clean, readable body text
+
+---
+
+## 4. Site Structure & Pages
+
+Choose either **Single-Page Application (SPA)** or **Multi-Page Application (MPA)** using Next.js App Router.
+
+### Mandatory Sections
+
+### 1. Landing Page (Home)
+
+* Hero section with name: **Rakesh G**
+* Animated headline (e.g., “Creative Developer | Engineer | Problem Solver”)
+* Call-to-action buttons (View Projects, Contact Me)
+* 3D or animated background using Three.js
+
+### 2. About Page
+
+* Personal introduction
+* Career goals and professional summary
+* Profile image or animated avatar
+
+### 3. Experience Page
+
+* Timeline-based layout
+* Company/Internship/Project roles
+* Responsibilities and achievements
+
+### 4. Skills Section
+
+* Categorized skill cards:
+
+  * Frontend
+  * Backend
+  * Tools
+  * Soft Skills
+* Animated progress bars or skill meters
+
+### 5. Coding Projects
+
+* Grid-based project showcase
+* Each project includes:
+
+  * Title
+  * Description
+  * Tech stack used
+  * Live demo link
+  * GitHub repository link
+
+### 6. Education
+
+* Academic timeline
+* Degree, institution, year, achievements
+
+### 7. Contact Page
+
+* Contact form (Node.js API handler)
+* Email integration
+* Social links (GitHub, LinkedIn, Twitter, etc.)
+
+---
+
+## 5. Global Components
+
+### Dynamic Header (Navbar)
+
+* Sticky, animated navigation
+* Smooth scrolling or page transitions
+* Mobile hamburger menu
+* Glow hover effects
+
+### Footer
+
+* Social icons
+* Copyright
+* Quick links
+* Animated gradient divider
+
+---
+
+## 6. Functional Requirements
+
+### Performance
+
+* Lazy load heavy components
+* Optimize Three.js rendering
+* Image optimization using Next.js Image
+
+### SEO
+
+* Meta tags for every page
+* Open Graph support
+* Sitemap generation
+
+### Accessibility
+
+* Keyboard navigation
+* Proper ARIA labels
+* Color contrast compliance
+
+---
+
+## 7. Folder Structure
+
+Use a clean, scalable structure:
+
+```
+/portfolio
+  /app
+    /page.tsx
+    /about
+    /experience
+    /projects
+    /education
+    /contact
+  /components
+    Header.tsx
+    Footer.tsx
+    Hero.tsx
+    SkillCard.tsx
+    ProjectCard.tsx
+    ThreeScene.tsx
+  /lib
+    barba.ts
+    animations.ts
+  /styles
+    globals.css
+    theme.css
+  /api
+    contact.ts
+```
+
+---
+
+## 8. Animations & Transitions
+
+* Page transitions via **Barba.js**
+* Scroll-triggered animations
+* Button hover neon glow
+* 3D object interaction on mouse move
+
+---
+
+## 9. Backend Features
+
+### Contact API
+
+* Form validation
+* Email sending (Nodemailer or API-based service)
+* Error handling and success feedback
+
+---
+
+## 10. Code Quality Standards
+
+* Fully typed TypeScript
+* Reusable components
+* Environment variables for secrets
+* ESLint + Prettier
+* Clean commit-ready structure
+
+---
+
+## 11. Deployment Targets
+
+* Vercel or Netlify (Frontend)
+* Optional backend hosting (Railway / Render)
+
+---
+
+## 12. Output Requirements for AI
+
+When generating code:
+
+* Generate **production-ready files**
+* Include **README.md with setup instructions**
+* Provide **environment variable examples**
+* Add **comments for key logic sections**
+
+---
+
+## 13. Final Instruction to AI
+
+> Generate a **fully functional, visually immersive, rave-themed portfolio website for Rakesh G** using **React, Next.js, TypeScript, Barba.js, Three.js, and Node.js**. The design should be modern, animated, responsive, and optimized for performance, accessibility, and SEO. Deliver clean, modular, and scalable code suitable for real-world deployment.
+
+---
+
+**This prompt is optimized for “vibe coding” platforms like Cursor, Antigravity, and Replit to ensure clarity in architecture, design intent, and implementation details.**
+>>>>>>> 187cd5840898d61d42c01a97c8a5b1d64fb58a7e
