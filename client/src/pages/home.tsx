@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Mail, GraduationCap, BookOpen, School } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Linkedin, Mail, GraduationCap, BookOpen, School } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -11,8 +11,8 @@ const profile = {
     "Building through challenges. Growing through code.",
   location: "India",
   socials: {
-    github: "https://github.com/Thenameisrakesh",
-    linkedin: "https://www.linkedin.com/in/thenameisrakesh",
+    github: "https://github.com/rakeshg07",
+    linkedin: "https://www.linkedin.com/in/rakeshg07",
     email: "mailto:rakeshgofficial07@gmail.com",
   },
 };
@@ -24,7 +24,7 @@ const projects = [
     description:
       "VR Academy is a virtual reality-based educational platform designed to offer tuition support for all students, promoting an effective and interactive learning environment.",
     stack: ["HTML", "CSS", "JavaScript", "VR"],
-    href: "https://github.com/Thenameisrakesh/VR_Academy",
+    href: "https://github.com/rakeshg07/VR_Academy",
     stars: 1,
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     description:
       "Full-stack accounting and inventory management solution for furniture manufacturers. Streamlines sales, purchases, invoicing, payments, and financial reporting.",
     stack: ["JavaScript", "Node.js", "Cloud"],
-    href: "https://github.com/Thenameisrakesh/shiv-clouds",
+    href: "https://github.com/rakeshg07/shiv-clouds",
     stars: 0,
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     description:
       "An eco-friendly product discovery platform built with modern web technologies, focusing on sustainable shopping and environmental consciousness.",
     stack: ["TypeScript", "React", "Tailwind"],
-    href: "https://github.com/Thenameisrakesh/Eco-finds",
+    href: "https://github.com/rakeshg07/Eco-finds",
     stars: 0,
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     description:
       "A smart weather and environmental monitoring application with real-time data visualization and intelligent forecasting capabilities.",
     stack: ["TypeScript", "React", "APIs"],
-    href: "https://github.com/Thenameisrakesh/Sky-Smart",
+    href: "https://github.com/rakeshg07/Sky-Smart",
     stars: 0,
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     description:
       "Latest academic project showcasing full-stack development skills with modern JavaScript frameworks and best practices.",
     stack: ["JavaScript", "React", "Node.js"],
-    href: "https://github.com/Thenameisrakesh/Mini-project-2026",
+    href: "https://github.com/rakeshg07/Mini-project-2026",
     stars: 0,
   },
 ];
@@ -360,11 +360,11 @@ function Hero() {
                     "h-11 rounded-xl border-blue-500/20 bg-blue-950/30 text-white",
                     "hover:bg-blue-900/40",
                   )}
-                  data-testid="button-download-resume"
+                  data-testid="button-view-resume"
                 >
-                  <a href="https://drive.google.com/file/d/1ie-CKwV7XmNdLOzV9JnHy5J48NYmvE6h/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <Download className="mr-2 h-4 w-4" strokeWidth={2} />
-                    Download Resume
+                  <a href="https://drive.google.com/file/d/1z_GkJx9BajSLztV-biK6YXcZsM64aZZG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" strokeWidth={2} />
+                    View Resume
                   </a>
                 </Button>
 
