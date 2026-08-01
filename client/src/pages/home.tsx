@@ -19,6 +19,15 @@ const profile = {
 
 const projects = [
   {
+    id: "handy-cricket-league",
+    title: "Handy Cricket League",
+    description:
+      "An interactive Hand Cricket game application featuring engaging gameplay, score tracking, and real-time match dynamics.",
+    stack: ["HTML", "CSS", "JavaScript", "Game"],
+    href: "https://github.com/rakeshg07/HANDY-CRICKET-LEAGUE",
+    stars: 0,
+  },
+  {
     id: "vr-academy",
     title: "VR Academy",
     description:
