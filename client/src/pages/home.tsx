@@ -1,7 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, ExternalLink, Github, Linkedin, Mail, GraduationCap, BookOpen, School } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "wouter";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const profile = {
@@ -109,7 +108,7 @@ function cn(...c: Array<string | false | null | undefined>) {
 function NeonPill({ children }: { children: React.ReactNode }) {
   return (
     <span
-      className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-950/40 px-3 py-1 text-xs text-white/80"
+      className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/60 px-3 py-1 text-xs text-muted-foreground"
       data-testid="pill-metadata"
     >
       <span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))] shadow-[0_0_24px_hsl(var(--primary)/0.45)]" />
@@ -132,7 +131,7 @@ function SectionTitle({
       <div>
         <p
           className={cn(
-            "font-mono text-xs tracking-widest text-white/55",
+            "font-mono text-xs tracking-widest text-muted-foreground",
             kickerClassName
           )}
           data-testid={`text-kicker-${kicker.toLowerCase()}`}
@@ -140,14 +139,14 @@ function SectionTitle({
           {kicker}
         </p>
         <h2
-          className="mt-2 text-balance font-[650] text-2xl text-white md:text-3xl"
+          className="mt-2 text-balance font-[650] text-2xl text-foreground md:text-3xl"
           data-testid={`text-section-${title.toLowerCase().replace(/\s+/g, "-")}`}
         >
           <span className="text-neon">{title}</span>
         </h2>
       </div>
       <div className="hidden md:block">
-        <div className="h-10 w-10 rounded-full border border-blue-500/20 bg-blue-950/30" />
+        <div className="h-10 w-10 rounded-full border border-border bg-muted/60" />
       </div>
     </div>
   );
@@ -183,12 +182,12 @@ function TopNav() {
         <div
           className={cn(
             "mt-4 flex items-center justify-between rounded-2xl px-4 py-3",
-            "bg-blue-950/50 backdrop-blur-xl border border-blue-500/20",
+            "bg-white/95 backdrop-blur-xl border border-border shadow-sm",
           )}
         >
           <div className="flex items-center gap-3">
             <div
-              className="h-9 w-9 overflow-hidden rounded-xl bg-blue-950/30"
+              className="h-9 w-9 overflow-hidden rounded-xl bg-muted/60"
               data-testid="img-avatar"
               aria-hidden="true"
             >
@@ -196,13 +195,13 @@ function TopNav() {
             </div>
             <div className="leading-tight">
               <div
-                className="font-[650] text-white"
+                className="font-[650] text-foreground"
                 data-testid="text-name-nav"
               >
                 {profile.name}
               </div>
               <div
-                className="text-xs text-white/55"
+                className="text-xs text-muted-foreground"
                 data-testid="text-role-nav"
               >
                 {profile.headline}
@@ -222,8 +221,8 @@ function TopNav() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-xl px-3 py-2 text-sm text-white/70",
-                  "transition-colors hover:bg-white/5 hover:text-white",
+                  "rounded-xl px-3 py-2 text-sm text-muted-foreground",
+                  "transition-colors hover:bg-muted/50 hover:text-foreground",
                 )}
                 data-testid={`link-${item.label.toLowerCase()}`}
               >
@@ -238,37 +237,37 @@ function TopNav() {
               target="_blank"
               rel="noreferrer"
               className={cn(
-                "grid h-10 w-10 place-items-center rounded-xl border border-blue-500/20 bg-blue-950/30",
-                "transition hover:bg-white/10",
+                "grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted/60",
+                "transition hover:bg-muted",
               )}
               data-testid="link-github"
               aria-label="GitHub"
             >
-              <Github className="h-4 w-4 text-white/80" strokeWidth={1.8} />
+              <Github className="h-4 w-4 text-muted-foreground" strokeWidth={1.8} />
             </a>
             <a
               href={profile.socials.linkedin}
               target="_blank"
               rel="noreferrer"
               className={cn(
-                "grid h-10 w-10 place-items-center rounded-xl border border-blue-500/20 bg-blue-950/30",
-                "transition hover:bg-white/10",
+                "grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted/60",
+                "transition hover:bg-muted",
               )}
               data-testid="link-linkedin"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-4 w-4 text-white/80" strokeWidth={1.8} />
+              <Linkedin className="h-4 w-4 text-muted-foreground" strokeWidth={1.8} />
             </a>
             <a
               href={profile.socials.email}
               className={cn(
-                "grid h-10 w-10 place-items-center rounded-xl border border-blue-500/20 bg-blue-950/30",
-                "transition hover:bg-white/10",
+                "grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted/60",
+                "transition hover:bg-muted",
               )}
               data-testid="link-email"
               aria-label="Email"
             >
-              <Mail className="h-4 w-4 text-white/80" strokeWidth={1.8} />
+              <Mail className="h-4 w-4 text-muted-foreground" strokeWidth={1.8} />
             </a>
           </div>
         </div>
@@ -323,25 +322,25 @@ function Hero() {
             >
               <NeonPill>
                 <span data-testid="text-location">{profile.location}</span>
-                <span className="text-white/35">/</span>
+                <span className="text-muted-foreground/50">/</span>
                 <span data-testid="text-availability">Available for work</span>
               </NeonPill>
 
               <h1
                 className={cn(
                   "mt-6 font-[700] tracking-[-0.03em]",
-                  "text-3xl text-white md:text-5xl",
+                  "text-3xl text-foreground md:text-5xl",
                 )}
                 data-testid="text-hero-title"
               >
                 <span className="block">{profile.name}</span>
-                <span className="mt-2 block text-white/85">
+                <span className="mt-2 block text-foreground/90">
                   <span className="text-neon">{profile.headline}</span>
                 </span>
               </h1>
 
               <p
-                className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-white/70 md:text-lg"
+                className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg"
                 data-testid="text-hero-blurb"
               >
                 {profile.blurb}
@@ -366,8 +365,8 @@ function Hero() {
                   asChild
                   variant="outline"
                   className={cn(
-                    "h-11 rounded-xl border-blue-500/20 bg-blue-950/30 text-white",
-                    "hover:bg-blue-900/40",
+                    "h-11 rounded-xl border-border bg-white text-foreground",
+                    "hover:bg-muted",
                   )}
                   data-testid="button-view-resume"
                 >
@@ -391,7 +390,7 @@ function Hero() {
             >
               {/* Circular Profile Photo */}
               <div className="relative mx-auto w-fit">
-                <div className="h-64 w-64 overflow-hidden rounded-full border-4 border-blue-500/30 shadow-[0_0_40px_hsl(var(--primary)/0.3)]">
+                <div className="h-64 w-64 overflow-hidden rounded-full border-4 border-primary/20 shadow-[0_4px_24px_hsl(var(--primary)/0.15)]">
                   <img
                     src="/profile.jpeg"
                     alt={profile.name}
@@ -401,7 +400,7 @@ function Hero() {
                 </div>
                 {/* Live indicator */}
                 <div
-                  className="absolute bottom-4 right-4 h-6 w-6 rounded-full border-4 border-[hsl(var(--background))] bg-[hsl(var(--secondary))] shadow-[0_0_28px_hsl(var(--secondary)/0.55)]"
+                  className="absolute bottom-4 right-4 h-6 w-6 rounded-full border-4 border-background bg-green-500 shadow-[0_0_12px_hsl(142_76%_36%/0.4)]"
                   aria-hidden="true"
                 />
               </div>
@@ -421,7 +420,7 @@ function About() {
         <SectionTitle kicker="ABOUT" title="Rakesh G" />
         <div className="mt-6 grid gap-4 md:grid-cols-12">
           <GlassCard className="md:col-span-7">
-            <div className="space-y-4 text-white/75 leading-relaxed" data-testid="text-about-body">
+            <div className="space-y-4 text-foreground/80 leading-relaxed" data-testid="text-about-body">
               <p>
                 I am a passionate Computer Science Engineering student at Maharaja Institute of Technology, Mysore, with a strong foundation in programming, problem-solving, and modern web development. I enjoy turning ideas into functional, scalable, and user-friendly digital solutions through clean code and thoughtful design.
               </p>
@@ -448,11 +447,11 @@ function About() {
               ].map((i) => (
                 <div
                   key={i.label}
-                  className="flex items-center justify-between rounded-2xl border border-blue-500/20 bg-blue-950/30 px-4 py-3"
+                  className="flex items-center justify-between rounded-2xl border border-border bg-muted/60 px-4 py-3"
                   data-testid={`row-about-${i.label.toLowerCase()}`}
                 >
-                  <div className="text-sm text-white/65">{i.label}</div>
-                  <div className="text-sm font-[650] text-white">{i.value}</div>
+                  <div className="text-sm text-muted-foreground">{i.label}</div>
+                  <div className="text-sm font-[650] text-foreground">{i.value}</div>
                 </div>
               ))}
             </div>
@@ -483,7 +482,7 @@ function Skills() {
             >
               <div className="flex items-center justify-between">
                 <div
-                  className="font-[650] text-white"
+                  className="font-[650] text-foreground"
                   data-testid={`text-skill-title-${s.id}`}
                 >
                   {s.title}
@@ -497,7 +496,7 @@ function Skills() {
                 {s.items.map((i) => (
                   <span
                     key={i}
-                    className="rounded-full border border-blue-500/20 bg-blue-950/30 px-3 py-1 text-xs text-white/70"
+                    className="rounded-full border border-border bg-muted/60 px-3 py-1 text-xs text-muted-foreground"
                     data-testid={`pill-skill-${s.id}-${i.toLowerCase().replace(/\s+/g, "-")}`}
                   >
                     {i}
@@ -527,13 +526,13 @@ function Projects() {
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1">
                   <div
-                    className="font-[650] text-white"
+                    className="font-[650] text-foreground"
                     data-testid={`text-project-title-${p.id}`}
                   >
                     {p.title}
                   </div>
                   <div
-                    className="mt-2 text-sm text-white/70 line-clamp-3"
+                    className="mt-2 text-sm text-muted-foreground line-clamp-3"
                     data-testid={`text-project-desc-${p.id}`}
                   >
                     {p.description}
@@ -545,7 +544,7 @@ function Projects() {
                 {p.stack.map((t) => (
                   <span
                     key={t}
-                    className="rounded-full border border-blue-500/20 bg-blue-950/30 px-3 py-1 text-xs text-white/70"
+                    className="rounded-full border border-border bg-muted/60 px-3 py-1 text-xs text-muted-foreground"
                     data-testid={`pill-project-${p.id}-${t.toLowerCase().replace(/\s+/g, "-")}`}
                   >
                     {t}
@@ -559,8 +558,8 @@ function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "inline-flex items-center gap-2 text-sm text-white/70",
-                    "hover:text-white transition-colors",
+                    "inline-flex items-center gap-2 text-sm text-muted-foreground",
+                    "hover:text-foreground transition-colors",
                   )}
                   data-testid={`link-project-${p.id}`}
                 >
@@ -571,11 +570,11 @@ function Projects() {
                   href={profile.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="grid h-8 w-8 place-items-center rounded-full border border-blue-500/20 bg-blue-950/30"
+                  className="grid h-8 w-8 place-items-center rounded-full border border-border bg-muted/60"
                   data-testid={`link-project-github-${p.id}`}
                   aria-label="GitHub profile"
                 >
-                  <Github className="h-4 w-4 text-white/60" strokeWidth={1.8} />
+                  <Github className="h-4 w-4 text-muted-foreground" strokeWidth={1.8} />
                 </a>
               </div>
             </GlassCard>
@@ -627,7 +626,7 @@ function Education() {
 
         <div className="mt-16 relative">
           {/* Vertical Timeline Line */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500/80 via-blue-500/40 to-transparent md:left-1/2 md:-ml-px" />
+          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/60 via-primary/30 to-transparent md:left-1/2 md:-ml-px" />
 
           <div className="space-y-12">
             {educationData.map((edu, idx) => (
@@ -636,40 +635,40 @@ function Education() {
                 idx % 2 === 0 ? "md:flex-row-reverse" : ""
               )}>
                 {/* Timeline Dot */}
-                <div className="absolute left-4 top-6 z-10 -ml-1.5 h-3 w-3 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,0.8)] md:left-1/2 md:top-1/2 md:-mt-1.5" />
+                <div className="absolute left-4 top-6 z-10 -ml-1.5 h-3 w-3 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary)/0.4)] md:left-1/2 md:top-1/2 md:-mt-1.5" />
 
                 {/* Content Card */}
                 <div className={cn(
                   "ml-12 md:ml-0 md:w-1/2",
                   idx % 2 === 0 ? "md:pl-16" : "md:pr-16"
                 )}>
-                  <GlassCard className="group transition-all duration-500 hover:border-blue-500/40 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+                  <GlassCard className="group transition-all duration-500 hover:border-primary/40 hover:shadow-[0_4px_24px_hsl(var(--primary)/0.1)]">
                     <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-950/30 text-blue-400 transition-transform group-hover:scale-110">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-muted/60 text-primary transition-transform group-hover:scale-110">
                         {edu.icon}
                       </div>
                       <div>
-                        <div className="font-mono text-xs font-medium tracking-wider text-blue-400/80">
+                        <div className="font-mono text-xs font-medium tracking-wider text-primary/80">
                           {edu.year}
                         </div>
-                        <h3 className="mt-1 text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                        <h3 className="mt-1 text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                           {edu.degree}
                         </h3>
                       </div>
                     </div>
 
                     <div className="mt-4 space-y-1">
-                      <div className="text-sm font-semibold text-white/90">
+                      <div className="text-sm font-semibold text-foreground/90">
                         {edu.field}
                       </div>
-                      <div className="text-sm text-white/60">
+                      <div className="text-sm text-muted-foreground">
                         {edu.school}
                       </div>
                     </div>
 
                     <div className="mt-4 flex items-center justify-between">
-                      <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-bold text-blue-300">
-                        <span className="h-1 w-1 rounded-full bg-blue-400" />
+                      <div className="inline-flex items-center gap-1.5 rounded-full border border-border bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                        <span className="h-1 w-1 rounded-full bg-primary" />
                         {edu.score}
                       </div>
                     </div>
@@ -681,7 +680,7 @@ function Education() {
                   "hidden md:block md:w-1/2 md:px-16",
                   idx % 2 === 0 ? "text-right" : "text-left"
                 )}>
-                  <span className="font-mono text-sm tracking-widest text-white/30">
+                  <span className="font-mono text-sm tracking-widest text-muted-foreground/40">
                     {edu.year.split(" ")[0]}
                   </span>
                 </div>
@@ -726,9 +725,9 @@ function Contact() {
         <RevealSection>
           <div className="grid gap-4 md:grid-cols-12">
             <div className="md:col-span-5">
-              <SectionTitle kicker="CONTACT" title="" kickerClassName="text-sm md:text-base text-white/80" />
+              <SectionTitle kicker="CONTACT" title="" kickerClassName="text-sm md:text-base text-muted-foreground" />
               <p
-                className="mt-4 text-white/70"
+                className="mt-4 text-muted-foreground"
                 data-testid="text-contact-body"
               >
                 Want to collaborate or have a role that fits? Reach out via email and I9ll get back quickly.
@@ -737,19 +736,19 @@ function Contact() {
                 <a
                   href={profile.socials.email}
                   className={cn(
-                    "glass block rounded-2xl px-4 py-3 text-white/80",
-                    "border border-white/10 hover:bg-white/5",
+                    "glass block rounded-2xl px-4 py-3 text-muted-foreground",
+                    "border border-border hover:bg-muted/50",
                   )}
                   data-testid="link-email-cta"
                 >
                   rakeshgofficial07@gmail.com
                 </a>
                 <div
-                  className="rounded-2xl border border-blue-500/20 bg-blue-950/30 p-4"
+                  className="rounded-2xl border border-border bg-muted/60 p-4"
                   data-testid="card-contact-note"
                 >
-                  <div className="text-xs text-white/55">Response time</div>
-                  <div className="mt-1 font-[650] text-white">Within 24 hours</div>
+                  <div className="text-xs text-muted-foreground">Response time</div>
+                  <div className="mt-1 font-[650] text-foreground">Within 24 hours</div>
                 </div>
               </div>
             </div>
@@ -757,23 +756,23 @@ function Contact() {
             <div className="md:col-span-7">
               <GlassCard>
                 <div className="flex min-h-[300px] flex-col items-center justify-center text-center">
-                  <div className="mb-4 grid h-16 w-16 place-items-center rounded-full bg-[hsl(var(--secondary))] text-[hsl(var(--secondary-foreground))]">
+                  <div className="mb-4 grid h-16 w-16 place-items-center rounded-full bg-primary text-primary-foreground">
                     <Mail className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Email me</h3>
-                  <p className="mt-2 text-white/70">Prefer sending an email? Click the button below to compose a message.</p>
-                  <a href={profile.socials.email} className="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[hsl(var(--secondary))] px-5 py-3 text-sm font-semibold text-[hsl(var(--secondary-foreground))] hover:brightness-110">Send Email</a>
+                  <h3 className="text-2xl font-bold text-foreground">Email me</h3>
+                  <p className="mt-2 text-muted-foreground">Prefer sending an email? Click the button below to compose a message.</p>
+                  <a href={profile.socials.email} className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:brightness-110">Send Email</a>
                 </div>
               </GlassCard>
             </div>
           </div>
 
           <footer
-            className="mt-14 border-t border-blue-500/20 pt-8"
+            className="mt-14 border-t border-border pt-8"
             data-testid="footer"
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="text-sm text-white/55" data-testid="text-copyright">
+              <div className="text-sm text-muted-foreground" data-testid="text-copyright">
                 {new Date().getFullYear()} {profile.name}
               </div>
               <div className="flex items-center gap-2">
@@ -781,7 +780,7 @@ function Contact() {
                   href={profile.socials.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-xl border border-blue-500/20 bg-blue-950/30 px-3 py-2 text-sm text-white/70 hover:bg-blue-900/40 hover:text-white"
+                  className="rounded-xl border border-border bg-muted/60 px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
                   data-testid="link-footer-github"
                 >
                   GitHub
@@ -790,14 +789,14 @@ function Contact() {
                   href={profile.socials.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-xl border border-blue-500/20 bg-blue-950/30 px-3 py-2 text-sm text-white/70 hover:bg-blue-900/40 hover:text-white"
+                  className="rounded-xl border border-border bg-muted/60 px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
                   data-testid="link-footer-linkedin"
                 >
                   LinkedIn
                 </a>
                 <a
                   href={profile.socials.email}
-                  className="rounded-xl border border-blue-500/20 bg-blue-950/30 px-3 py-2 text-sm text-white/70 hover:bg-blue-900/40 hover:text-white"
+                  className="rounded-xl border border-border bg-muted/60 px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
                   data-testid="link-footer-email"
                 >
                   Email
@@ -812,16 +811,8 @@ function Contact() {
 }
 
 export default function Home() {
-  const bg = useMemo(() => {
-    return [
-      "radial-gradient(900px circle at 30% 20%, hsl(217 91% 60% / 0.01), transparent 60%)",
-      "radial-gradient(75% 10% at 75% 10%, hsl(190 90% 50% / 0.008), transparent 60%)",
-      "radial-gradient(1000px circle at 55% 80%, hsl(200 95% 60% / 0.005), transparent 65%)",
-    ].join(",");
-  }, []);
-
   return (
-    <div className="min-h-dvh" data-testid="page-home" style={{ backgroundImage: bg }}>
+    <div className="min-h-dvh bg-background" data-testid="page-home">
       <TopNav />
       <main className="relative">
         <Hero />

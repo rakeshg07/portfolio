@@ -56,47 +56,42 @@
 }
 
 :root {
-  --button-outline: rgba(255, 255, 255, 0.12);
-  --badge-outline: rgba(255, 255, 255, 0.08);
+  --button-outline: rgba(0, 0, 0, 0.08);
+  --badge-outline: rgba(0, 0, 0, 0.06);
 
-  --opaque-button-border-intensity: 10;
+  --opaque-button-border-intensity: -8;
 
-  --elevate-1: rgba(255, 255, 255, 0.05);
-  --elevate-2: rgba(255, 255, 255, 0.09);
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.06);
 
-  /* Rave / Dark Future tokens (H S% L%) */
-  --background: 222 47% 4%;
-  /* Darker Deep Blue Black */
-  --foreground: 210 40% 96%;
+  /* Professional light theme (H S% L%) */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
 
-  --card: 222 47% 11%;
-  --card-foreground: 210 40% 96%;
-  --popover: 222 47% 11%;
-  --popover-foreground: 210 40% 96%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
 
-  --border: 217 91% 60%;
-  /* Blue */
-  --card-border: 217 91% 60%;
+  --border: 220 13% 91%;
+  --card-border: 220 13% 91%;
 
   --primary: 217 91% 60%;
-  /* Blue */
-  --primary-foreground: 222 47% 11%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 190 90% 50%;
-  /* Cyan */
+  --secondary: 214 32% 96%;
   --secondary-foreground: 222 47% 11%;
 
-  --muted: 217 30% 18%;
-  --muted-foreground: 215 20% 75%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
 
-  --accent: 200 95% 60%;
-  /* Light Blue */
-  --accent-foreground: 222 47% 11%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --input: 217 30% 18%;
+  --input: 220 13% 91%;
   --ring: 217 91% 60%;
 
   --chart-1: 217 91% 60%;
@@ -105,13 +100,13 @@
   --chart-4: 130 78% 55%;
   --chart-5: 40 95% 60%;
 
-  --sidebar: 222 47% 6%;
-  --sidebar-foreground: 210 40% 96%;
-  --sidebar-border: 217 30% 18%;
+  --sidebar: 0 0% 98%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-border: 220 13% 91%;
   --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 222 47% 11%;
-  --sidebar-accent: 217 30% 18%;
-  --sidebar-accent-foreground: 210 40% 96%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 40% 96%;
+  --sidebar-accent-foreground: 222 47% 11%;
   --sidebar-ring: 217 91% 60%;
 
   --font-sans: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Inter,
@@ -157,11 +152,6 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    background-image:
-      radial-gradient(800px circle at 15% 10%, hsl(217 91% 60% / 0.01), transparent 55%),
-      radial-gradient(800px circle at 85% 0%, hsl(190 90% 50% / 0.008), transparent 60%),
-      radial-gradient(900px circle at 50% 100%, hsl(200 95% 60% / 0.005), transparent 60%);
-    background-attachment: fixed;
   }
 }
 
@@ -236,34 +226,25 @@
 
   .rave-grid {
     background-image:
-      linear-gradient(to right, hsl(217 91% 60% / 0.002) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(190 90% 50% / 0.002) 1px, transparent 1px);
+      linear-gradient(to right, hsl(220 13% 91% / 0.8) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(220 13% 91% / 0.8) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 70%);
   }
 
   .text-neon {
-    text-shadow:
-      0 0 12px hsl(217 91% 60% / 0.6),
-      0 0 36px hsl(190 90% 50% / 0.3);
+    color: hsl(var(--primary));
   }
 
   .glass {
-    background: hsl(217 91% 32% / 0.25);
-    border: 1px solid hsl(217 91% 60% / 0.2);
+    background: hsl(0 0% 100%);
+    border: 1px solid hsl(var(--border));
     box-shadow:
-      0 0 0 1px hsl(217 91% 60% / 0.05) inset,
-      0 18px 70px hsl(0 0% 0% / 0.55);
-    backdrop-filter: blur(20px);
+      0 1px 3px hsl(0 0% 0% / 0.06),
+      0 4px 16px hsl(0 0% 0% / 0.04);
   }
 
   .noise::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.005;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+    content: none;
   }
 }
