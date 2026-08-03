@@ -13,7 +13,7 @@ export async function registerRoutes(
       status: "ok",
       time: new Date().toISOString(),
       emailConfigured: !!process.env.EMAIL_PASS,
-      emailUser: process.env.EMAIL_USER || "rakeshgofficial07@gmail.com"
+      emailUser: process.env.EMAIL_USER || "rakeshg0125@gmail.com"
     });
   });
 
@@ -28,7 +28,7 @@ export async function registerRoutes(
       const message = await storage.createMessage(parsed.data);
 
       // Attempt to send email
-      const emailUser = process.env.EMAIL_USER || "rakeshgofficial07@gmail.com";
+      const emailUser = process.env.EMAIL_USER || "rakeshg0125@gmail.com";
       const emailPass = process.env.EMAIL_PASS;
 
       if (!emailPass) {
@@ -50,7 +50,7 @@ export async function registerRoutes(
 
       const mailOptions = {
         from: `"${parsed.data.name}" <${emailUser}>`,
-        to: "rakeshgofficial07@gmail.com",
+        to: "rakeshg0125@gmail.com",
         replyTo: parsed.data.email,
         subject: `Portfolio Contact: ${parsed.data.name}`,
         text: `You have a new message from your portfolio!\n\nName: ${parsed.data.name}\nEmail: ${parsed.data.email}\n\nMessage:\n${parsed.data.message}`,
@@ -58,7 +58,7 @@ export async function registerRoutes(
 
       try {
         await transporter.sendMail(mailOptions);
-        console.log(`Email successfully sent to rakeshgofficial07@gmail.com`);
+        console.log(`Email successfully sent to rakeshg0125@gmail.com`);
         res.status(201).json({ ...message, emailStatus: "sent" });
       } catch (emailError: any) {
         console.error("SMTP Error:", emailError);
@@ -79,7 +79,7 @@ export async function registerRoutes(
 
   // Diagnostic route
   app.get("/api/test-email", async (_req, res) => {
-    const emailUser = process.env.EMAIL_USER || "rakeshgofficial07@gmail.com";
+    const emailUser = process.env.EMAIL_USER || "rakeshg0125@gmail.com";
     const emailPass = process.env.EMAIL_PASS;
 
     if (!emailPass) {

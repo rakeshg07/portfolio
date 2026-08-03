@@ -12,7 +12,7 @@ const profile = {
   socials: {
     github: "https://github.com/rakeshg07",
     linkedin: "https://www.linkedin.com/in/rakeshg07",
-    email: "mailto:rakeshgofficial07@gmail.com",
+    email: "mailto:rakeshg0125@gmail.com",
   },
 };
 
@@ -730,7 +730,7 @@ function Contact() {
                 className="mt-4 text-muted-foreground"
                 data-testid="text-contact-body"
               >
-                Want to collaborate or have a role that fits? Reach out via email and I9ll get back quickly.
+                Thank you for visiting my portfolio. If you have an opportunity that aligns with my skills and experience, I'd be pleased to connect. Please reach out via email, and I'll respond within 24 hours.
               </p>
               <div className="mt-6 space-y-3">
                 <a
@@ -741,7 +741,7 @@ function Contact() {
                   )}
                   data-testid="link-email-cta"
                 >
-                  rakeshgofficial07@gmail.com
+                  rakeshg0125@gmail.com
                 </a>
                 <div
                   className="rounded-2xl border border-border bg-muted/60 p-4"
