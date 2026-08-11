@@ -370,7 +370,7 @@ function Hero() {
                   )}
                   data-testid="button-view-resume"
                 >
-                  <a href="https://drive.google.com/file/d/1z_GkJx9BajSLztV-biK6YXcZsM64aZZG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <a href="https://drive.google.com/file/d/1lPQSGATZJgs7FzA0TChcy2xuklckxAax/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" strokeWidth={2} />
                     View Resume
                   </a>
