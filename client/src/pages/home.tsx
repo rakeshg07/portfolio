@@ -2,6 +2,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, ExternalLink, Github, Linkedin, Mail, GraduationCap, BookOpen, School } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { KineticToggle } from "@/components/KineticToggle";
 
 const profile = {
   name: "Rakesh G",
@@ -182,7 +183,7 @@ function TopNav() {
         <div
           className={cn(
             "mt-4 flex items-center justify-between rounded-2xl px-4 py-3",
-            "bg-white/95 backdrop-blur-xl border border-border shadow-sm",
+            "bg-white/80 dark:bg-[#0a0a0f]/80 backdrop-blur-xl border border-border/80 dark:border-cyan-500/20 shadow-sm dark:shadow-[0_0_20px_rgba(0,240,255,0.1)] transition-colors duration-300",
           )}
         >
           <div className="flex items-center gap-3">
@@ -269,6 +270,7 @@ function TopNav() {
             >
               <Mail className="h-4 w-4 text-muted-foreground" strokeWidth={1.8} />
             </a>
+            <KineticToggle />
           </div>
         </div>
       </div>
@@ -365,8 +367,8 @@ function Hero() {
                   asChild
                   variant="outline"
                   className={cn(
-                    "h-11 rounded-xl border-border bg-white text-foreground",
-                    "hover:bg-muted",
+                    "h-11 rounded-xl border border-border bg-card dark:bg-muted/40 text-foreground",
+                    "hover:bg-muted font-medium",
                   )}
                   data-testid="button-view-resume"
                 >
