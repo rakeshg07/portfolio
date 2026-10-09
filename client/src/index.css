@@ -56,6 +56,10 @@
 }
 
 :root {
+  /* Hero Typographic Headline Variables - Light Mode */
+  --hero-title-color: #0f172a;
+  --hero-title-size: clamp(1.85rem, 4.2vw, 3.75rem);
+
   --button-outline: rgba(0, 0, 0, 0.08);
   --badge-outline: rgba(0, 0, 0, 0.06);
 
@@ -140,6 +144,9 @@
 }
 
 .dark {
+  /* Hero Typographic Headline Variables - Dark Mode */
+  --hero-title-color: #F6F1E4;
+
   --background: 240 18% 6%;
   --foreground: 210 40% 98%;
 
@@ -304,5 +311,29 @@
 
   .noise::before {
     content: none;
+  }
+
+  /* Hero Typographic Headline */
+  .hero-title {
+    font-family: 'Archivo Black', 'Anton', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--hero-title-color);
+    font-size: var(--hero-title-size);
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-shadow: none;
+    background: none;
+    -webkit-text-fill-color: initial;
+    filter: none;
+  }
+
+  @media (min-width: 640px) {
+    .hero-title {
+      white-space: nowrap;
+    }
   }
 }

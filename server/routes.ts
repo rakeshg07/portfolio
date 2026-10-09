@@ -77,36 +77,5 @@ export async function registerRoutes(
     }
   });
 
-  // Diagnostic route
-  app.get("/api/test-email", async (_req, res) => {
-    const emailUser = process.env.EMAIL_USER || "rakeshg0125@gmail.com";
-    const emailPass = process.env.EMAIL_PASS;
-
-    if (!emailPass) {
-      return res.status(400).json({ error: "EMAIL_PASS not set" });
-    }
-
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: emailUser,
-        pass: emailPass,
-      },
-    });
-
-    try {
-      await transporter.verify();
-      await transporter.sendMail({
-        from: emailUser,
-        to: emailUser,
-        subject: "SMTP Test - Portfolio Website",
-        text: "This is a test message to verify your portfolio SMTP settings. If you received this, your email delivery is working!",
-      });
-      res.json({ status: "success", message: "SMTP connection verified and test email sent." });
-    } catch (err: any) {
-      res.status(500).json({ status: "error", error: err.message || String(err) });
-    }
-  });
-
   return httpServer;
 }
