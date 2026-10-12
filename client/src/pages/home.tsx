@@ -33,7 +33,7 @@ const profile = {
     linkedin: "https://www.linkedin.com/in/rakeshg07",
     email: "mailto:rakeshg0125@gmail.com",
     emailDisplay: "rakeshg0125@gmail.com",
-    resume: "https://drive.google.com/file/d/1lPQSGATZJgs7FzA0TChcy2xuklckxAax/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/1i_bNizhvsCEybywWu9eSXlYojajB_BFV/view?usp=sharing",
   },
 };
 
